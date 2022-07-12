@@ -1,0 +1,19 @@
+
+<div class="row form-group">
+  <form class="form-input">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <textarea matInput [(ngModel)]="text" name="text"></textarea>
+    </mat-form-field>
+  </form>
+</div>
+
+<div class="row justify-content-around">
+  <button type="button" [disabled]="!text" class="col-auto btn btn-primary" (click)="clearTextBoxArea()">Clear</button>
+  <button type="button" [disabled]="!text" class="col-auto btn btn-success" (click)="parseText()">Parse</button>
+</div>
+
+<app-tableresults *ngIf="isVisible" class="row justify-content-center table-results"
+  [words]="wordsParsed">
+</app-tableresults>
+
+

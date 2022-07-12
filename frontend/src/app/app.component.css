@@ -1,0 +1,20 @@
+h1 {
+  justify-content: center;
+}
+
+.banner, .banner a {
+  background-color: #563d7c;
+  color: white !important;
+}
+
+.banner svg {
+  height: 25px;
+  width: auto;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.banner a {
+  display: flex;
+  justify-content: end;
+}

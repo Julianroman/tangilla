@@ -1,0 +1,22 @@
+.table-results {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+mat-header-cell, mat-cell {
+  justify-content: center !important;
+}
+
+td, th {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.mat-sort-header-container {
+  justify-content: center !important;
+}
+
+th.mat-header-cell {
+  font-size: large;
+}
