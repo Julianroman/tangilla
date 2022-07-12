@@ -1,15 +1,15 @@
 
-<div class="row form-group">
-  <form class="form-input">
+<div class="row justify-content-center form-group">
+  <form class="form-input col-sm-8 col-md-6">
     <mat-form-field class="example-full-width" appearance="outline">
       <textarea matInput [(ngModel)]="text" name="text"></textarea>
     </mat-form-field>
   </form>
 </div>
 
-<div class="row justify-content-around">
-  <button type="button" [disabled]="!text" class="col-auto btn btn-primary" (click)="clearTextBoxArea()">Clear</button>
-  <button type="button" [disabled]="!text" class="col-auto btn btn-success" (click)="parseText()">Parse</button>
+<div class="row justify-content-center ">
+  <button type="button" [disabled]="!text" class="col-sm-6 col-md-1 btn btn-primary" (click)="clearTextBoxArea()">Clear</button>
+  <button type="button" [disabled]="!text" class="col-sm-6 col-md-1 btn btn-success" (click)="parseText()">Parse</button>
 </div>
 
 <app-tableresults *ngIf="isVisible" class="row justify-content-center table-results"
