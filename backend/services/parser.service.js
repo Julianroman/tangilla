@@ -27,18 +27,27 @@ const parseText = async (text) => {
       let synonymousPresents = hits[word].filter(w => w != word && wordsValid.includes(w));
 
       // Add data
-      //synonyms[word] = { word: word, synonyms_found: synonymousPresents.length };
       synonyms.push({ word: word, synonyms_found: synonymousPresents.length });
 
       // Skip following words
-      let existingSynonymous = wordsValid.filter(w => synonymousPresents.includes(w));
-      if (existingSynonymous && existingSynonymous.length > 0) wordsToSkip.concat(existingSynonymous);
+      const existingSynonymous = wordsValid.filter(w => synonymousPresents.includes(w));
+      if (existingSynonymous && existingSynonymous.length > 0) {
+        wordsToSkip.push(...existingSynonymous);
+      }
     }
   }
 
   await createActivity(text, JSON.stringify(synonyms));
 
-  return synonyms;
+  return synonyms.sort(orderResults);
+}
+
+const orderResults = (a, b) => {
+  if (a.synonyms_found > b.synonyms_found){
+    return 1;
+  } else if (a.synonyms_found < b.synonyms_found) {
+    return -1
+  } else return 0;
 }
 
 const initParse = (text) => {
