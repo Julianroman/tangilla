@@ -1,0 +1,32 @@
+{
+  "name": "tangilla-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.2",
+    "multer": "^1.4.3",
+    "mysql2": "^2.2.5",
+    "node-dev": "^7.1.0",
+    "node-wordnet": "^0.1.12",
+    "sequelize": "^6.6.5",
+    "wndb-with-exceptions": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/morgan": "^1.9.2",
+    "@types/sequelize": "^4.28.10",
+    "nodemon": "^2.0.7"
+  }
+}
